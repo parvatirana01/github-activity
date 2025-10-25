@@ -1,0 +1,15 @@
+{
+  "name": "github-activity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+  "github-activity": "./index.js"
+},
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": ["github", "cli", "activity"],
+  "author": "",
+  "license": "ISC"
+}
