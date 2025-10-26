@@ -62,8 +62,9 @@ function fetchGitHubActivity(username) {
 
 // Function to format and display activity
 function displayActivity(events) {
-    if (!events || events.length === 0) {
+    if (!events && events.length === 0) {
         console.log('No recent activity found.');
+        
         return;
     }
 
@@ -85,7 +86,7 @@ function formatEvent(event) {
 
     switch (type) {
         case 'PushEvent':
-            const commitCount = event.payload.commits.length;
+            const commitCount = event.payload.commits?.length;
             return `Pushed ${commitCount} commit(s) to ${repo}`;
         
         case 'IssuesEvent':
